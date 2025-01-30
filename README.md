@@ -21,12 +21,12 @@ To run the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```
-   git clone https://github.com/NICANORKYAMBA/task-zero
+   git clone https://github.com/NICANORKYAMBA/hng12-backend-api
    ```
 
 2. **Navigate to the project directory**:
    ```
-   cd task-zero/hng12-backend-api
+   cd hng12-backend-api/
    ```
 
 3. **Build the project**:
@@ -62,7 +62,7 @@ The API will return a JSON response in the following format:
 {
   "email": "nicanorkyamba98@gmail.com",
   "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/NICANORKYAMBA/task-zero"
+  "github_url": "https://github.com/NICANORKYAMBA/hng12-backend-api"
 }
 ```
 

@@ -13,7 +13,7 @@ public class ApiService {
     public Response getResponse() {
         String email = "nicanorkyamba98@gmail.com";
         String currentDatetime = ZonedDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"));
-        String githubUrl = "https://github.com/NICANORKYAMBA/task-zero";
+        String githubUrl = "https://github.com/NICANORKYAMBA/hng12-backend-api";
 
         return new Response(email, currentDatetime, githubUrl);
     }
