@@ -1,8 +1,14 @@
 package com.hng12.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Response {
     private String email;
+
+    @JsonProperty("current_datetime")
     private String currentDatetime;
+
+    @JsonProperty("github_url")
     private String githubUrl;
 
     public Response(String email, String currentDatetime, String githubUrl) {

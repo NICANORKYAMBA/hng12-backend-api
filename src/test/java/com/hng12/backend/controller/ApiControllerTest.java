@@ -30,7 +30,7 @@ public class ApiControllerTest {
 
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"currentDatetime\":\"2025-01-30T09:30:00Z\",\"githubUrl\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
+                .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"current_datetime\":\"2025-01-30T09:30:00Z\",\"github_url\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class ApiControllerTest {
 
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{\"email\":\"different-email@example.com\",\"currentDatetime\":\"2025-01-30T09:30:00Z\",\"githubUrl\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
+                .andExpect(content().json("{\"email\":\"different-email@example.com\",\"current_datetime\":\"2025-01-30T09:30:00Z\",\"github_url\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ApiControllerTest {
 
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"currentDatetime\":\"2025-02-01T10:00:00Z\",\"githubUrl\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
+                .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"current_datetime\":\"2025-02-01T10:00:00Z\",\"github_url\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class ApiControllerTest {
 
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"currentDatetime\":\"2025-01-30T09:30:00Z\",\"githubUrl\":\"https://github.com/different/repo\"}"));
+                .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"current_datetime\":\"2025-01-30T09:30:00Z\",\"github_url\":\"https://github.com/different/repo\"}"));
     }
 
     @Test
