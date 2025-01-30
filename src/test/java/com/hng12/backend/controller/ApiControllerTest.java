@@ -28,7 +28,7 @@ public class ApiControllerTest {
         Response response = new Response("nicanorkyamba98@gmail.com", "2025-01-30T09:30:00Z", "https://github.com/NICANORKYAMBA/hng12-backend-api");
         when(apiService.getResponse()).thenReturn(response);
 
-        mockMvc.perform(get("/api"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"currentDatetime\":\"2025-01-30T09:30:00Z\",\"githubUrl\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
     }
@@ -38,7 +38,7 @@ public class ApiControllerTest {
         Response response = new Response("different-email@example.com", "2025-01-30T09:30:00Z", "https://github.com/NICANORKYAMBA/hng12-backend-api");
         when(apiService.getResponse()).thenReturn(response);
 
-        mockMvc.perform(get("/api"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"email\":\"different-email@example.com\",\"currentDatetime\":\"2025-01-30T09:30:00Z\",\"githubUrl\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
     }
@@ -48,7 +48,7 @@ public class ApiControllerTest {
         Response response = new Response("nicanorkyamba98@gmail.com", "2025-02-01T10:00:00Z", "https://github.com/NICANORKYAMBA/hng12-backend-api");
         when(apiService.getResponse()).thenReturn(response);
 
-        mockMvc.perform(get("/api"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"currentDatetime\":\"2025-02-01T10:00:00Z\",\"githubUrl\":\"https://github.com/NICANORKYAMBA/hng12-backend-api\"}"));
     }
@@ -58,7 +58,7 @@ public class ApiControllerTest {
         Response response = new Response("nicanorkyamba98@gmail.com", "2025-01-30T09:30:00Z", "https://github.com/different/repo");
         when(apiService.getResponse()).thenReturn(response);
 
-        mockMvc.perform(get("/api"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"email\":\"nicanorkyamba98@gmail.com\",\"currentDatetime\":\"2025-01-30T09:30:00Z\",\"githubUrl\":\"https://github.com/different/repo\"}"));
     }
@@ -67,7 +67,7 @@ public class ApiControllerTest {
     public void testGetInfoWithError() throws Exception {
         doThrow(new RuntimeException("Internal Server Error")).when(apiService).getResponse();
 
-        mockMvc.perform(get("/api"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isInternalServerError())
                 .andExpect(content().string("Internal Server Error"));
     }
@@ -77,7 +77,7 @@ public class ApiControllerTest {
         Response response = new Response(null, null, null);
         when(apiService.getResponse()).thenReturn(response);
 
-        mockMvc.perform(get("/api"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().string("Missing required parameters"));
     }

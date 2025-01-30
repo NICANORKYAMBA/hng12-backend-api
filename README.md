@@ -42,14 +42,14 @@ To run the project locally, follow these steps:
 5. **Access the API**:
    Open your browser or use a tool like Postman to access the API at:
    ```
-   http://localhost:8080/api
+   http://localhost:8080/
    ```
 
 ## API Documentation
 
 ### Endpoint
 
-- **GET** `/api`
+- **GET** `/`
 
 ### Request Format
 No request parameters are required
@@ -70,7 +70,7 @@ The API will return a JSON response in the following format:
 
 To retrieve the information, send a GET request to the endpoint. You should receive a response similar to the one shown above.
 
-``` curl -X GET http://localhost:8080/api ```
+``` curl -X GET http://localhost:8080/ ```
 
 ## Backlink
 

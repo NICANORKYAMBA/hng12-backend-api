@@ -1,7 +1,5 @@
 com/hng12/backend/config/WebConfig.class
-com/hng12/backend/model/DefaultResponse.class
 com/hng12/backend/App.class
-com/hng12/backend/controller/HomeController.class
 com/hng12/backend/model/Response.class
 com/hng12/backend/controller/ApiController.class
 com/hng12/backend/config/WebConfig$1.class
